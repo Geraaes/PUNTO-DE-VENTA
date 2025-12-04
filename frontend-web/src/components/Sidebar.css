@@ -1,0 +1,141 @@
+/* -----------------------
+   Sidebar compacta mejorada
+----------------------- */
+.sidebar {
+    width: 60px;
+    /* ancho compacto */
+    background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+    color: #f9fafb;
+    height: 100vh;
+    padding: 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    transition: width 0.3s ease, background 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hover de sidebar (ampliación opcional) */
+.sidebar:hover {
+    width: 180px;
+    transition: width 0.3s ease;
+}
+
+/* Título de la sidebar */
+.sidebar-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* Lista vertical */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+}
+
+/* Cada item */
+.sidebar li {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Iconos con fondo circular al hover */
+.sidebar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f9fafb;
+    font-size: 2rem;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.sidebar a:hover {
+    color: #3b82f6;
+    transform: scale(1.2) translateX(5px);
+    background: rgba(59, 130, 246, 0.1);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Icono activo */
+.sidebar a.active {
+    color: #3b82f6;
+    background: rgba(59, 130, 246, 0.2);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Tooltip al pasar el cursor */
+.sidebar li[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0;
+    animation: fadeInTooltip 0.2s forwards;
+}
+
+/* Animación de tooltip */
+@keyframes fadeInTooltip {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Efecto de transición suave al expandirse el tooltip */
+.sidebar li[title]:hover::after {
+    transition: all 0.2s ease;
+}
+.logout-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: none;
+    color: #f9fafb;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+    color: #ef4444;
+    /* rojo para logout */
+    background: rgba(239, 68, 68, 0.1);
+    transform: scale(1.2);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}

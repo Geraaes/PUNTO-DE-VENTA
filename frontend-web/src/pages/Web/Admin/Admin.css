@@ -1,0 +1,395 @@
+/* =========================================================
+   LAYOUT GLOBAL
+========================================================= */
+body,
+html {
+    margin: 20px;
+    padding: 150px;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   SIDEBAR FIJO
+========================================================= */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: #1e1e2f;
+    color: #fff;
+    padding: 35px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    height: 60px;
+    width: calc(100% - 250px);
+    background: #fff;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    z-index: 900;
+}
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+.admin-main {
+    margin-left: 250px;
+    margin-top: 60px;
+    padding: 30px 40px;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* =========================================================
+   HEADER (TÍTULO + INTRO)
+   - Posición inicial fija dentro de admin-main
+========================================================= */
+.header-container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    flex-shrink: 0;
+}
+
+/* H1 fijo */
+.header-container h1 {
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0;
+}
+
+/* Introducción */
+.intro {
+    font-size: 0.95rem;
+    color: #6b7280;
+    font-style: italic;
+    padding: 12px 16px;
+    margin: 0;
+    text-align: center;
+}
+
+/* =========================================================
+   BOTONES (NEGROS + HOVER)
+========================================================= */
+.admin-button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.2s;
+    background-color: #000;
+    color: #fff;
+}
+
+.admin-button:hover {
+    background-color: #222222;
+    transform: translateY(-2px);
+}
+
+.admin-button svg {
+    pointer-events: none;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* =========================================================
+   FORMULARIOS (FIJOS Y RESPONSIVOS)
+========================================================= */
+.admin-form,
+.usuarios-form {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 360px;
+    min-width: 320px;
+    box-sizing: border-box;
+}
+
+.admin-form label,
+.usuarios-form label {
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 6px;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea,
+.usuarios-form input,
+.usuarios-form select,
+.usuarios-form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background-color: #fafafa;
+    font-size: 0.95rem;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus,
+.usuarios-form input:focus,
+.usuarios-form select:focus,
+.usuarios-form textarea:focus {
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.2);
+    background-color: #ffffff;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* =========================================================
+   TABLAS MODERNAS CON SCROLL FIJO
+========================================================= */
+.table-container {
+    width: 100%;
+    max-width: 1000px;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    background: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    min-width: 400px;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+th {
+    background: #f3f4f6;
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+    color: #1f2937;
+    position: sticky;
+    top: 0;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #ffffff;
+    word-break: break-word;
+}
+
+tr:hover td {
+    background-color: #f9fafb;
+    transition: background 0.2s ease;
+}
+
+.actions-cell {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.table-container::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f3f4f6;
+}
+
+/* =========================================================
+   IMÁGENES DE PRODUCTO
+========================================================= */
+.producto-sin-imagen {
+    width: 150px;
+    height: 150px;
+    background: #e5e7eb;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 200px;
+}
+
+/* =========================================================
+   GRID DE CARDS
+   - Filas de 3 columnas
+========================================================= */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   CARDS INDIVIDUALES
+========================================================= */
+.card-grid .card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-grid .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   RESPONSIVE GRID
+========================================================= */
+@media (max-width: 900px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   CARD DE VENTAS
+========================================================= */
+.card-ventas {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    height: 350px;
+    box-sizing: border-box;
+}
+
+.card-ventas .ventas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =========================================================
+   CARD DE REPORTE
+========================================================= */
+.card-reporte {
+    background-color: #fefefe;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-reporte:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-reporte .admin-button {
+    width: auto;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #1e3a8a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.card-reporte .admin-button:hover {
+    background-color: #3b4cca;
+    transform: translateY(-2px);
+}

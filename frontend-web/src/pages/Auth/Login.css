@@ -1,0 +1,177 @@
+/* =======================
+   Cuerpo de la página
+======================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    /* fondo blanco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* =======================
+   Contenedor principal
+======================= */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    /* bienvenida arriba de la card */
+    align-items: center;
+    gap: 30px;
+    /* espacio entre card y texto de bienvenida */
+    width: 100%;
+    padding: 20px;
+}
+
+/* =======================
+   Bienvenida fuera de la card
+======================= */
+/* =======================
+   Bienvenida fuera de la card
+======================= */
+.welcome-title {
+    text-align: center;
+    font-size: 40px;
+    /* más grande */
+    font-weight: 800;
+    color: #333333;
+    margin-bottom: 15px;
+    /* menos espacio con la card */
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* =======================
+   Introducción dentro de la card
+======================= */
+.login-intro {
+    text-align: center;
+    font-size: 16px;
+    /* un poco más grande */
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    padding: 0 10px;
+    margin-top: -5px;
+    /* pega un poco más con el título */
+}
+/* =======================
+   Tarjeta del formulario
+======================= */
+.login-form {
+    width: 360px;
+    min-height: 540px;
+    padding: 50px 40px;
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* espacio entre elementos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =======================
+   Inputs centrados
+======================= */
+.login-input {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #fafafa;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.login-input:focus {
+    border-color: #646cff;
+    box-shadow: 0 4px 12px rgba(100, 108, 255, 0.2);
+    outline: none;
+}
+
+/* =======================
+   Error centrado
+======================= */
+.login-error {
+    color: #e53935;
+    font-size: 13px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* =======================
+   Botón de login negro
+======================= */
+.login-button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: #333333;
+    /* negro sólido */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    background-color: #444444;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+/* =======================
+   Links opcionales
+======================= */
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.form-footer a {
+    color: #6a5cff;
+    /* azul medio-morado */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* =======================
+   Animación de aparición
+======================= */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

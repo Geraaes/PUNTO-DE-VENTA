@@ -1,0 +1,103 @@
+/* Perfil.css */
+
+/* Contenedor principal: Sidebar + contenido */
+.edit-perfil-container {
+    display: flex;
+}
+
+/* Contenedor del contenido principal (a la derecha del sidebar) */
+.edit-perfil-main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Sección de edición de perfil o formulario */
+.edit-perfil-section {
+    margin-bottom: 20px;
+}
+
+/* Inputs de perfil y contraseña */
+.edit-perfil-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    /* Para que padding no aumente ancho */
+}
+
+/* Botones */
+.edit-perfil-button {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.edit-perfil-button:hover {
+    background-color: #45a049;
+}
+
+/* Labels */
+.edit-perfil-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* Títulos */
+.edit-perfil-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+/* Perfil.css */
+.perfil-container {
+    display: flex;
+}
+
+.perfil-main {
+    flex: 1;
+    padding: 20px;
+}
+
+.perfil-section {
+    margin-bottom: 20px;
+}
+
+.perfil-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.perfil-input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.perfil-button {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.perfil-button:hover {
+    background-color: #0056b3;
+}
+
+.perfil-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.perfil-button-logout {
+    margin-left: 10px;
+}
